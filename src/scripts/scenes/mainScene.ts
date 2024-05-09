@@ -1,8 +1,12 @@
 import GameLogo from '../objects/gameLogo'
 import FpsText from '../objects/fpsText'
+import HealthBar from '../objects/healthBar'
+import ManaBar from '../objects/manaBar'
 
 export default class MainScene extends Phaser.Scene {
   fpsText
+  private healthBar: HealthBar
+  private manaBar: ManaBar
 
   constructor() {
     super({ key: 'MainScene' });
@@ -11,6 +15,8 @@ export default class MainScene extends Phaser.Scene {
   create() {
     new GameLogo(this, this.cameras.main.width / 2, this.cameras.main.height / 2);
     this.fpsText = new FpsText(this);
+    this.healthBar = new HealthBar(this, 25, 650, 100);
+    this.manaBar = new ManaBar(this, 25, 675, 100);
 
     // display the Phaser.VERSION
     this.add
