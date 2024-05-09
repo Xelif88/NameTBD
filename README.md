@@ -1,7 +1,7 @@
 # NameTBD
 
 ## Requirements
-NodeJS 20.12.2 LTS
+NodeJS https://nodejs.org/en/download
 
 ## Setup
 ```bash
