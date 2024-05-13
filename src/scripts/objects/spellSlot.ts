@@ -1,7 +1,7 @@
-import Spell from './spell'
-
 export default class SpellSlot extends Phaser.GameObjects.Sprite
 {
+    private spellSprite: Phaser.GameObjects.Sprite;
+
     constructor(scene: Phaser.Scene, x: number, y: number)
     {
         super(scene, x, y, 'spellSlot');
@@ -12,8 +12,14 @@ export default class SpellSlot extends Phaser.GameObjects.Sprite
 
     addSpell(sprite: string): void
     {
-        const spellSprite = this.scene.add.sprite(this.x, this.y, sprite);
-        spellSprite.setScale(this.displayWidth/spellSprite.displayWidth);
-        
+        this.removeSpell();
+        this.spellSprite = this.scene.add.sprite(this.x, this.y, sprite);
+        this.spellSprite.setScale(this.displayWidth/this.spellSprite.displayWidth);
+    }
+
+    removeSpell(): void
+    {
+        if(this.spellSprite)
+            this.spellSprite.destroy();
     }
 }

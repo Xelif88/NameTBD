@@ -12,6 +12,7 @@ export default class SpellBar
 
         this.spellBar = scene.add.sprite(x, y, 'spellBar');
         this.spellBar.setScale(0.75);
+        this.spellBar.setDepth(this.spellBar.depth - 1);
 
         this.spellSlots.push(new SpellSlot(scene, x, y));
         this.spellSlots[0].setPosition(x - 3 - 2*this.spellSlots[0].displayWidth, y - this.spellSlots[0].displayHeight/2);
@@ -38,14 +39,20 @@ export default class SpellBar
         this.spellSlots[7].setPosition(x - 1, y + this.spellSlots[0].displayHeight/2);
     }
 
-    public addSpell(slot: number, spell: Spell): void
+    public addSpell(slot: number, sprite: string): void
     {
-        this.spellSlots[slot].addSpell(spell.getSprite());
+        if(slot < 0 || slot > 7)
+            return;
+
+        this.spellSlots[slot].addSpell(sprite);
     }
 
     public removeSpell(slot: number): void
     {
+        if(slot < 0 || slot > 7)
+            return;
 
+        this.spellSlots[slot].removeSpell();
     }
 
 }
