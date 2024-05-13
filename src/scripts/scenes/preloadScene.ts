@@ -5,6 +5,13 @@ export default class PreloadScene extends Phaser.Scene {
 
   preload() {
     this.load.image('game-logo', 'assets/img/rat_474x278.png');
+    this.load.image('sphereTexture', 'assets/gui/itsmars_orb_fill.png');
+    this.load.image('bigContour', 'assets/gui/itsmars_orb_back1.png');
+    this.load.image('fillTexture', 'assets/gui/itsmars_scroll_fill.png' );
+    this.load.image('contour', 'assets/gui/itsmars_orb_border.png');
+    this.load.image('shadow', 'assets/gui/itsmars_orb_shadow.png')
+    this.load.image('highlight', 'assets/gui/itsmars_orb_highlight.png')
+
 	this.load.audio('spinning_rat_normal', 'assets/sound/FREEBIRD.mp3');
 	this.load.audio('spinning_rat_power', 'assets/sound/FREEBIRD_POWER.mp3');
   }
