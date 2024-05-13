@@ -1,5 +1,5 @@
 import SpellSlot from './spellSlot'
-import Spell from './spell'
+import Spell from '../objects/spell'
 
 export default class SpellBar
 {
