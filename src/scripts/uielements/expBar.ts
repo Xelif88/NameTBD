@@ -11,7 +11,7 @@ export default class ExpBar
     constructor(scene: Phaser.Scene, x: number, y: number, maxExp: number)
     {
         this.maxExp = maxExp;
-        this.currentExp = maxExp;
+        this.currentExp = 0;
         const scale = 0.504;
 
         this.background = scene.add.sprite(x, y, 'expBack');
