@@ -9,8 +9,11 @@ export default class PreloadScene extends Phaser.Scene {
     this.load.image('bigContour', 'assets/gui/itsmars_orb_back1.png');
     this.load.image('fillTexture', 'assets/gui/itsmars_scroll_fill.png' );
     this.load.image('contour', 'assets/gui/itsmars_orb_border.png');
-    this.load.image('shadow', 'assets/gui/itsmars_orb_shadow.png')
-    this.load.image('highlight', 'assets/gui/itsmars_orb_highlight.png')
+    this.load.image('shadow', 'assets/gui/itsmars_orb_shadow.png');
+    this.load.image('highlight', 'assets/gui/itsmars_orb_highlight.png');
+    this.load.image('spellBar', 'assets/gui/ManaPanel.png');
+    this.load.image('spellSlot', 'assets/gui/52x52 SpellSlotBorder.png');
+    this.load.image('attack', 'assets/gui/icons/28.png');
 
 	this.load.audio('spinning_rat_normal', 'assets/sound/FREEBIRD.mp3');
 	this.load.audio('spinning_rat_power', 'assets/sound/FREEBIRD_POWER.mp3');
