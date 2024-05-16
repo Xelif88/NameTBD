@@ -1,4 +1,4 @@
-import Spell from "../spell";
+import Spell from "../spell"
 
 class DamageOnHit implements IOnHitEffect
 {
@@ -11,7 +11,7 @@ class DamageOnHit implements IOnHitEffect
     constructor(spell: Spell)
     {
         this.spell = spell;
-        spell.addOnHitAction(this);
+        spell.addOnHitEffect(this);
     }
 
     //public onHit(hitEntity: entity, castDirection, movementDirection): void
@@ -19,4 +19,8 @@ class DamageOnHit implements IOnHitEffect
     //    const totalDamage = (this.baseDamage + (this.scaling * this.spell.spellOwner.getStat(scalingStat))) * this.spell.spellOwner.damageTypeBonus(this.damageType);
     //    hitEntity.takeDamage(this.damageType, totalDamage);
     //}
+
+    public onMaxRange(position: any, castDirection: any, movementDirection: any): void {
+        
+    }
 }
